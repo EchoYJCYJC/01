@@ -1,0 +1,21 @@
+--cpu Cortex-M3
+"xiaodeng\startup_stm32f103xb.o"
+"xiaodeng\main.o"
+"xiaodeng\stm32f1xx_it.o"
+"xiaodeng\stm32f1xx_hal_msp.o"
+"xiaodeng\stm32f1xx_hal_gpio_ex.o"
+"xiaodeng\stm32f1xx_hal.o"
+"xiaodeng\stm32f1xx_hal_rcc.o"
+"xiaodeng\stm32f1xx_hal_rcc_ex.o"
+"xiaodeng\stm32f1xx_hal_gpio.o"
+"xiaodeng\stm32f1xx_hal_dma.o"
+"xiaodeng\stm32f1xx_hal_cortex.o"
+"xiaodeng\stm32f1xx_hal_pwr.o"
+"xiaodeng\stm32f1xx_hal_flash.o"
+"xiaodeng\stm32f1xx_hal_flash_ex.o"
+"xiaodeng\stm32f1xx_hal_exti.o"
+"xiaodeng\system_stm32f1xx.o"
+--strict --scatter "xiaodeng\xiaodeng.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list "xiaodeng.map" -o xiaodeng\xiaodeng.axf
