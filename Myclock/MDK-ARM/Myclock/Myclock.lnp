@@ -1,0 +1,23 @@
+--cpu Cortex-M3
+"myclock\startup_stm32f103xb.o"
+"myclock\main.o"
+"myclock\stm32f1xx_it.o"
+"myclock\stm32f1xx_hal_msp.o"
+"myclock\stm32f1xx_hal_gpio_ex.o"
+"myclock\stm32f1xx_hal_tim.o"
+"myclock\stm32f1xx_hal_tim_ex.o"
+"myclock\stm32f1xx_hal.o"
+"myclock\stm32f1xx_hal_rcc.o"
+"myclock\stm32f1xx_hal_rcc_ex.o"
+"myclock\stm32f1xx_hal_gpio.o"
+"myclock\stm32f1xx_hal_dma.o"
+"myclock\stm32f1xx_hal_cortex.o"
+"myclock\stm32f1xx_hal_pwr.o"
+"myclock\stm32f1xx_hal_flash.o"
+"myclock\stm32f1xx_hal_flash_ex.o"
+"myclock\stm32f1xx_hal_exti.o"
+"myclock\system_stm32f1xx.o"
+--strict --scatter "Myclock\Myclock.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list "Myclock.map" -o Myclock\Myclock.axf
